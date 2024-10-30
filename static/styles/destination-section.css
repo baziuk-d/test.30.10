@@ -1,0 +1,130 @@
+
+.destinationsSection h1{
+    font-size: 36px;
+    font-family: "Playfair", serif;
+    font-weight: 700;
+}
+
+.destinationsTitle{
+    display: flex;
+    justify-content: space-between;
+    padding: 163px 240px 50px;
+    align-items: center;
+}
+
+.destinationsTitle a{
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #FB8F1D;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.elements{
+    padding: 0 240px;
+    display: flex;
+    column-gap: 25px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.elements img{
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.elements div {
+    position: relative;
+}
+
+.elements div div{
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    padding: 4px 20px 0 0;
+    border-radius: 0 6px 0 0;
+}
+.elements h4{
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    color: #042521;
+    font-weight: 600;
+}
+
+.elements p{
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    color: #80918E;
+    font-weight: 500;
+}
+
+.elementText{
+    opacity: 100;
+    transition: 0.2s ease-in-out;
+}
+
+.destinationsSection{
+    padding: 0 0 134px;
+}
+
+.element{
+    overflow: hidden;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.element :hover{
+    transform: scale(1.25);
+    z-index: 10;
+}
+
+.element:hover .elementText{
+    opacity: 0;
+}
+
+@media screen and (max-width: 1800px) {
+    .elements{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10%;
+        row-gap: 20px;
+    }
+    .elements div img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .elements{
+        padding: 0 15%;
+        grid-template-columns: 1fr;
+    }
+    .elements h1{
+        font-size: clamp(0.938rem, 0.848rem + 0.238vw, 1.063rem);
+    }
+    .elements{
+        font-size: clamp(0.813rem, 0.723rem + 0.238vw, 0.938rem)
+    }
+    .destinationsSection h1{
+        font-size: clamp(1.625rem, 1.179rem + 1.19vw, 2.25rem);
+        width: 50%;
+    }
+    .destinationsSection a{
+        font-size: clamp(0.875rem, 0.741rem + 0.357vw, 1.063rem);
+    }
+    .destinationsTitle{
+        padding: 80px 5%;
+    }
+}

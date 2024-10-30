@@ -1,0 +1,142 @@
+.search{
+    padding: 14px 30px;
+    border: 1.5px solid rgba(3, 154, 230);
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgb(255, 255, 255);
+    color: rgba(3, 154, 230);
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.search:active{
+    transform: scale(0.9);
+}
+
+.clear{
+    padding: 14px 14px;
+    border: 1.5px solid rgba(227, 0, 0, 0.937);
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgba(216, 2, 2, 0.882);
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.clear:active{
+    transform: scale(0.9);
+}
+
+.search img{
+    display: none;
+}
+
+.clear img{
+    display: none;
+}
+.create img{
+    display: none;
+    rotate: 45deg;
+}
+.section-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 190px 30px;
+}
+
+.input-buttons-menu{
+    column-gap: 11px;
+    display: flex;
+}
+
+.input-buttons-menu input{
+    padding: 15px 90px  15px 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    font-family: "Muli", serif;
+    font-size: 14px;
+    background: rgba(128, 128, 128, 0.097);
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+
+.create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+}
+
+.create button {
+    border: 1px solid rgb(255, 255, 255);
+    background: rgb(101, 130, 51);
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 15px 46px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 1700px) {
+    .crud-menu-item{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .crud-menu-item{
+        grid-template-columns: 1fr;
+    }
+    .input-buttons-menu{
+        display: flex;
+        align-items: center;
+    }
+    .search span{
+        display: none;
+    }
+    .search img{
+        display: flex;
+    }
+    .create{
+        padding: 10px;
+    }
+    .clear span{
+        display: none;
+    }
+    .clear img{
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 1100px){
+    .section-menu{
+        padding: 0 14% 40px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .section-menu{
+        flex-direction: column-reverse;
+        row-gap: 20px;
+    }
+    .create span{
+        display: none;
+    }
+    .create img{
+        display: flex;
+    }
+}

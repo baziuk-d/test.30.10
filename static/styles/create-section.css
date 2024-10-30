@@ -1,0 +1,127 @@
+body{
+    position: relative;
+}
+
+.create-modal{
+    z-index: 1;
+    position: fixed;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 30px 30px 30px 30px;
+}
+
+.create-modal form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.create-modal label{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.create-modal h1{
+    font-size: 40px;
+    font-family: "Playfair", sans-serif;
+    font-weight: 600;
+}
+
+.create-modal span{
+    font-weight: 500;
+    font-family: "Muli", serif;
+    font-size: 25px;
+}
+
+.create-modal-button{
+    border: 1px solid cornflowerblue;
+    background-color: cornflowerblue;
+    font-family: "Inter", serif;
+    border-radius: 6px;
+    color: white;
+    padding: 15px 125px;
+    cursor: pointer;
+}
+
+.title-create-input{
+    border-radius: 6px;
+    width: 300px;
+    height: 40px;
+    border: 1px solid black;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.description-create-input{
+    border-radius: 6px;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+    padding-top: 5px;
+    padding-left: 15px;
+    font-size: 20px;
+    resize: vertical;
+}
+
+.price-create-input{
+    border-radius: 6px;
+    width: 300px;
+    height: 40px;
+    border: 1px solid black;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.background-modal{
+    background-color: #7D7987;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    opacity: 0.8;
+    display: none;
+}
+
+.error-modal{
+    display: none;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: white;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: darkred;
+    font-family: "Muli", serif;
+    padding: 10px;
+}

@@ -1,0 +1,172 @@
+.heroSection{
+    padding: 0 189px 175px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heroSection h1{
+    font-family: "Playfair", serif;
+    font-size: 64px;
+    color: #202336;
+    line-height: 80px;
+    padding: 114px 0;
+    max-width: 80%  ;
+}
+
+.heroSection h2{
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    color: #202336;
+    padding: 0 0 21px;
+}
+
+.heroSection hr{
+    border: none;
+    background-color: #202336;
+    width: 32px;
+    height: 2px;
+    margin-left: 0;
+}
+
+.heroSection label{
+    display: grid;
+    padding: 48px 0;
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+    gap: 30px;
+}
+
+.heroSection select{
+    border: 1px solid #AFB0B9;
+    border-radius: 6px;
+    padding: 0 21px;
+    width: 220px;
+    height: 52px;
+    appearance: none;
+    background: url("../assets/Bird.svg") no-repeat right 26px center;
+}
+
+.heroSection > img{
+    padding: 0 0 0 105px;
+}
+
+.explore{
+    font-family: "Muli", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    border: 1px solid #FB8F1D;
+    border-radius: 8px;
+    padding: 20px 60px;
+    background-color: #FB8F1D;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.explore:active{
+    transform: scale(0.9);
+}
+
+@media screen and (max-width: 2560px) {
+    .heroSection {
+        justify-content: space-evenly !important;
+    }
+    .heroSection img {
+        width: 45%;
+        height: auto;
+    }
+    .heroSection h1 {
+        font-size: clamp(4rem, 0.803rem + 2.623vw, 5rem) !important;
+    }
+    .heroSection h2 {
+        font-size: clamp(1.375rem, -0.223rem + 1.311vw, 1.875rem) !important;
+    }
+    .heroSection select {
+        font-size: clamp(0.938rem, -1.06rem + 1.639vw, 1.563rem);
+    }
+    .explore {
+        font-size: clamp(1.063rem, 0.463rem + 0.492vw, 1.25rem);
+    }
+}
+
+@media screen and (max-width: 1450px) and (min-width: 1201px){
+    .heroSection > img {
+        width: 90%;
+        height: auto;
+        padding: 0 90px 0 0;
+    }
+
+    .heroSection{
+        padding: 0 100px 150px !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .heroSection {
+        flex-direction: column;
+        row-gap: 80px;
+    }
+    .heroSection > div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .heroSection h1 {
+        min-width: 120% !important;
+        text-align: center;
+        padding: 100px 0 50px !important;
+    }
+
+    .explore {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .heroSection > img {
+        padding: 0 !important;
+        width: 500px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .heroSection h1 {
+        max-width: 100% !important;
+        font-size: 40px !important;
+        padding: 60px 0 !important;
+    }
+
+    .heroSection h2 {
+        font-size: 20px !important;
+    }
+
+    .heroSection > img {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .heroSection{
+        padding: 0 10% !important;
+    }
+    .heroSection h1{
+        max-width: 10%;
+        font-size: 30px !important;
+        padding: 40px 0 !important;
+    }
+    .heroSection label{
+        grid-template-columns: 1fr !important;
+    }
+    .heroSection h2 {
+        font-size: 15px !important;
+    }
+
+    .heroSection img {
+        width: 300px;
+        padding: 0 0 30px 0 !important;
+    }
+}

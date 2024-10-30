@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thousand Sunny</title>
+    <link rel="stylesheet" href="read_page.css">
+</head>
+<body>
+    <header id="header">
+        <img src="../assets/logo.svg" alt="logo">
+        <nav id="nav">
+            <ul>
+                <li><a href="../home_page/home_page.html">Home</a></li>
+                <li><a href="">Destinations</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Partner</a></li>
+            </ul>
+            <div class="signButtons">
+                <a class="login" href="#">Login</a>
+                <a class="register" href="#">Register</a>
+            </div>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="line3"></div>
+        </div>
+    </header>
+    <div id="container"></div>
+    <main>
+        <section class="section-menu">
+            <div class="create">
+                <form onsubmit="return false">
+                    <label>
+                        <button id="create-button-menu">Create</button>
+                    </label>
+                </form>
+            </div>
+            <div class="search-menu" id="search-menu">
+                <form onsubmit="return false">
+                    <label class="input-buttons-menu">
+                        <input type="text" placeholder="Type something..." id="input_search">
+                        <label class="buttons-menu">
+                            <button type="submit" class="search" id="button_search">Search</button>
+                            <button id="button-reset" type="reset" class="clear">Clear</button>
+                        </label>
+                    </label>
+                </form>
+            </div>
+        </section>
+        <div id="background-modal" class="background-modal"></div>
+        <div id="create-modal" class="create-modal">
+            <h1>Create destination</h1>
+            <form onsubmit="return false">
+                <label>
+                    <span>Title</span>
+                    <input type="text" placeholder="Text..." class="title-create-input" maxlength="25" id="title-modal">
+                </label>
+                <label>
+                    <span>Description</span>
+                    <textarea class="description-create-input" id="description-modal"></textarea>
+                </label>
+                <label>
+                    <span>Price ($)</span>
+                    <input id="price-modal" type="number" min="0" placeholder="Number..." class="price-create-input">
+                </label>
+                <label>
+                    <input type="file" id="image-modal" accept=".jpg, .jpeg, .png">
+                </label>
+                <label>
+                    <button class="create-modal-button" type="submit" id="submit-create-button">Submit</button>
+                </label>
+            </form>
+        </div>
+        <div id="edit-modal" class="edit-modal">
+            <h1>Edit destination</h1>
+            <form onsubmit="return false">
+                <label>
+                    <span>Title</span>
+                    <input type="text" placeholder="Text..." class="title-create-input" maxlength="25" id="title-edit-modal">
+                </label>
+                <label>
+                    <span>Description</span>
+                    <textarea class="description-create-input" id="description-edit-modal"></textarea>
+                </label>
+                <label>
+                    <span>Price ($)</span>
+                    <input id="price-edit-modal" type="number" min="0" placeholder="Number..." class="price-create-input">
+                </label>
+                <label>
+                    <input type="file" id="image-edit-modal" accept=".jpg, .jpeg, .png">
+                </label>
+                <label>
+                    <button class="create-modal-button" type="submit" id="submit-edit-button">Submit</button>
+                </label>
+            </form>
+        </div>
+        <div id="error-modal" class="error-modal">
+            <h1>You have not entered: <span id="error-value" class="error-value"></span></h1>
+        </div>
+        <section class="section-items">
+            <div class="item-manager">
+                <div class="sort-div">
+                    <h1>Manage Destinations</h1>
+                    <form>
+                        <label for="sort"> Sort by: </label>
+                        <select class="sort-select" name="sort" id="sort">
+                            <option selected disabled hidden>Choose one...</option>
+                            <option value="price (0-99+)">Price (0 - 99+)</option>
+                            <option value="price (99+-0)">Price (99+ - 0)</option>
+                            <option value="name (A-Z)">Name (A - Z)</option>
+                            <option value="name (Z-A)">Name (Z - A)</option>
+                        </select>
+                    </form>
+                </div>
+                <hr>
+                <div class="count-div">
+                    <h1>Count price</h1>
+                    <form onsubmit="return false">
+                        <label>
+                            <button id="button-count" type="submit" class="item-count-button">Count</button>
+                            <output>Total: <span id="total_price"></span></output>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div class="item-storage" id="item-storage">
+            </div>
+            <template id="item">
+                <div class="item">
+                    <div>
+                        <img src="" alt="item-img" id="item-image">
+                        <div class="item-info">
+                            <p id="id" class="id"></p>
+                            <h1 id="name-item"></h1>
+                            <p id="description-item"></p>
+                            <p><span id="price"></span>$</p>
+                            <p class="item-updated-at">Last updated:<span id="item-updated-at"></span></p>
+                        </div>
+                    </div>
+                    <div class="item-buttons">
+                        <form onsubmit="return false">
+                            <label>
+                                <button class="edit-item" id="button-edit">Edit</button>
+                                <button class="remove-item" id="button-remove">Remove</button>
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </template>
+        </section>
+    </main>
+    <footer>
+        <div class="footerHead">
+            <img src="../assets/logo.svg" alt="logo">
+            <p>©2020 Thousand Sunny. All rights reserved</p>
+        </div>
+        <hr>
+        <div class="footerBot">
+            <ul>
+                <li>
+                    <a href="https://www.x.com" target="_blank">
+                        <img src="../assets/Twitter.svg" alt="Twitter">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="../assets/Facebook.svg" alt="Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="../assets/Instagram.svg" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <img src="../assets/LinkedIn.svg" alt="LinkedIn">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="../assets/YouTube.svg" alt="YouTube">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../scripts/home.js"></script>
+    <script src="../scripts/read_page.js" type="module"></script>
+</body>
+</html>

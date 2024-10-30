@@ -1,0 +1,181 @@
+.section-items{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 190px 30px;
+}
+
+.sort-div h1{
+    font-size: 36px;
+    font-family: "Playfair", serif;
+    font-weight: 700;
+    color: #202336;
+    padding: 0 0 40px 0;
+}
+
+.sort-div label{
+    font-size: 21px;
+    font-family: "Inter", sans-serif;
+    color: #202336;
+    padding: 0 20px 0 0;
+    font-weight: 600;
+    width: 50%;
+}
+
+.sort-div select{
+    border: 1px solid #AFB0B9;
+    border-radius: 6px;
+    padding: 0 21px;
+    width: 200px;
+    height: 40px;
+    appearance: none;
+    background: url("../assets/Bird.svg") no-repeat right 26px center;
+}
+
+.sort-div form{
+    display: flex;
+    align-items: center;
+    padding: 0 0 20px 0;
+}
+
+.item-manager{
+    border-right: 2px solid #C4C4C4;
+    padding-right: 15px;
+}
+
+.item-manager hr{
+    width: 100%;
+    height: 1px;
+    color: #C4C4C4;
+    margin: 10px 0;
+}
+
+.count-div{
+    padding: 20px 0 0 0;
+}
+
+.count-div h1{
+    font-size: 28px;
+    font-family: "Playfair", serif;
+    font-weight: 600;
+    color: #202336;
+    padding: 0 0 25px 0;
+}
+.count-div label{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-count-button{
+    border: 1px solid rgb(101, 130, 51);
+    background: none;
+    border-radius: 6px;
+    font-size: 15px;
+    padding: 15px 46px;
+    color: rgb(101, 130, 51);
+    font-family: "Inter", sans-serif;
+    width: 50%;
+    cursor: pointer;
+}
+
+.count-div output{
+    font-size: 24px;
+    font-family: "Muli", serif;
+}
+
+
+.item-storage{
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    column-gap: 30px;
+    row-gap: 20px;
+    padding: 0 0 0 30px;
+}
+
+.item{
+    border: 1px solid #C4C4C4;
+    border-radius: 6px;
+    display:grid
+}
+
+.item-info{
+    padding: 12px 12px 0 12px;
+}
+
+.item h1{
+    font-family: "Muli", serif;
+    font-weight: 600;
+    padding: 0 0 10px;
+    font-size: 28px;
+    text-align: center;
+    margin-top: -24px;
+}
+
+.item p {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    padding: 0 0 20px;
+}
+
+.item img{
+    border-radius: 6px;
+    padding: 0 0 20px;
+    width: 100%;
+    height: 90%;
+    max-height: 200px;
+}
+
+.item-updated-at{
+    padding: 0;
+    font-size: 16px;
+    color: #C4C4C4  ;
+}
+
+.edit-item{
+    border: 1px solid cornflowerblue;
+    background: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: cornflowerblue;
+    border-radius: 6px;
+    font-family: "Inter", serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+    
+.remove-item{
+    border: 1px solid indianred;
+    background-color: indianred;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Inter", serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.item-buttons label{
+    padding-bottom: 10px;
+    column-gap: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+#id{
+    display: none;
+}
+
+
+.modal {
+    display: none;
+}
+
+#background-modal {
+    display: none;
+}
+
+

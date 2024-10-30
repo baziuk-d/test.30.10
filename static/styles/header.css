@@ -1,0 +1,135 @@
+header{
+    justify-content: space-between;
+    display: flex;
+    padding: 43px 190px;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 35px;
+}
+
+
+header a{
+    color: #B8BECD;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+header a:hover{
+    color: black;
+}
+
+.login{
+    color: #FB8F1D;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    border-radius: 8px;
+    border: 1px solid #FB8F1D;
+    background: inherit;
+    cursor: pointer;
+    padding: 15px 46px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.register{
+    color: #FFFFFF;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    background: #FB8F1D;
+    border: 1px solid #FB8F1D;
+    border-radius: 8px;
+    padding: 15px 36px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    column-gap: 34px;
+}
+
+.signButtons{
+    display: flex;
+    column-gap: 18px;
+}
+
+.login:active{
+    transform: scale(0.9);
+}
+
+.register:active{
+    transform: scale(0.9);
+}
+
+.hamburger {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div{
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    transition: 0.2s ease-in-out;
+}
+
+#container{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1100px) {
+    .hamburger{
+        display: flex;
+    }
+    #container ul {
+        flex-direction: column;
+        align-items: end;
+        margin-bottom: 20px;
+    }
+    nav{
+        display: none;
+        gap:10px;
+    }
+    a{
+        text-decoration: none;
+        color: #B8BECD;
+        font-family: "Inter", sans-serif;
+    }
+    li a:hover{
+        color: black;
+    }
+    header{
+        padding: 43px 15%;
+    }
+    .signButtons{
+        gap: 20px;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    li a{
+        font-size: 14px;
+    }
+    .login{
+        font-size: 14px;
+    }
+    .register{
+        font-size: 14px;
+    }
+}

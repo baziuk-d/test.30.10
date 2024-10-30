@@ -1,0 +1,102 @@
+.learnMoreSection{
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 141px 111px;
+}
+
+.learnMoreSection > div{
+    max-width: 40%;
+}
+
+.learnMoreSection h1{
+    font-family: "Playfair", serif;
+    font-size: 36px;
+    font-weight: 700;
+    max-width: 80%;
+    padding: 0 0 20px 0;
+}
+
+.learnMoreSection p{
+    color: #7D7987;
+    font-size: 17px;
+    font-family: "Muli", sans-serif;
+    font-weight: 30;
+    max-width: 77.5%;
+    padding: 0 0 40px;
+}
+
+.learnMore{
+    padding: 20px 40px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    border-radius: 8px;
+    background-color: #FB8F1D;
+    border: 1px solid #FB8F1D;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.learnMore:active{
+    transform: scale(0.9);
+}
+
+@media screen and (max-width: 1450px) {
+    .learnMoreSection img{
+        width: 50%;
+        height: auto;
+    }
+    .learnMoreSection h1{
+        font-size: clamp(1.25rem, 0.536rem + 1.905vw, 2.25rem);
+    }
+
+    .learnMoreSection p{
+        font-size: clamp(0.875rem, 0.741rem + 0.357vw, 1.063rem);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .learnMoreSection{
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .learnMoreSection img{
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+    }
+    .learnMoreSection h1{
+        max-width: 100%;
+        font-size: clamp(1.563rem, 1.339rem + 0.595vw, 1.875rem);
+    }
+    .learnMoreSection p{
+        font-size: clamp(0.938rem, 0.848rem + 0.238vw, 1.063rem)
+    }
+    .learnMoreSection div{
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        text-align: center;
+    }
+    .learnMore{
+        font-size: clamp(1.25rem, 0.536rem + 1.905vw, 2.25rem);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .learnMoreSection{
+        padding: 100px 50px;
+    }
+
+    .learnMoreSection img{
+        width: 300px;
+        height: auto;
+    }
+
+}

@@ -1,0 +1,50 @@
+body{
+    position: relative;
+}
+
+.edit-modal {
+    z-index: 1;
+    position: fixed;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 30px 30px 30px 30px;
+}
+
+
+.edit-modal form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.edit-modal label{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-modal h1{
+    font-size: 40px;
+    font-family: "Playfair", sans-serif;
+    font-weight: 600;
+}
+
+.edit-modal span{
+    font-weight: 500;
+    font-family: "Muli", serif;
+    font-size: 25px;
+}
